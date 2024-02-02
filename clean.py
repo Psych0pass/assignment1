@@ -8,6 +8,7 @@ def clean(input1, input2, output):
     df.dropna(inplace=True)
     insur = df['job'].str.contains('insurance|Insurance')
     df = df[~insur]
+    print("Output file shape:", df.shape)
     return df
 
 
